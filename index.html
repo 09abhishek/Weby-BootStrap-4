@@ -9,33 +9,153 @@
     <!-- Bootstrap CSS Linking -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+<style>
+    body,html {
+        height:100%;
+    }
+    section:nth-child(even) {
+        background-color: #dddddd;
+    }
+    section {
+        width:100%;
+        min-height: 100%;
+        padding-top: 75px;
+    }
+
+</style>
 
 <body>
 <!-- Nav tag is used to build a navigation bar at the top of every website Hence it is
 very important!-->
 
 
-<nav id="myNav" class="navbar">
+<nav id="myNav" class="navbar navbar-dark bg-dark fixed-top navbar-expand-sm">
+    <a class = "navbar-brand" href="http://www.atechlab.net" > ATechLab</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMain"><span class="navbar-toggler-icon"></span> </button>
 
-    <div class="" id="navBarMain">
-        <ul class="">
-            <li class=""><a href="#about" class=""> About Us </a></li>
-            <li class=""><a href="#about" class=""> Our Service </a></li>
-            <li class=""><a href="#about" class=""> Our Products </a></li>
-            <li class=""><a href="#about" class=""> Contact Us </a></li>
+    <div class="collapse navbar-collapse" id="navBarMain">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#about" class="nav-link"> About Us </a></li>
+            <li class=""><a href="#service" class="nav-link"> Our Service </a></li>
+            <li class=""><a href="#product" class="nav-link"> Our Products </a></li>
+            <li class=""><a href="#contact" class="nav-link"> Contact Us </a></li>
 
         </ul>
-
+        <!--<span class="navbar-text"> Welcome to ATechLab!</span>-->
 
     </div>
 
 </nav>
+<section class="jumbotron section" >
+    <div class="center">
+        <div class="container text-sm-center">
+            <div class="display-3"> ATechLab</div>
+            <!--m-2  is margin class number specifies the gap!-->
+            <div class="m-3"> The Ultimate Cyber Tech Lab!</div>
+        </div>
+    </div>
+</section>
 
-<section id="about"></section>
-<section></section>
-<section></section>
-<section></section>
+
+<section id="about"   class="section bg-dark text-light text-justify">
+    <div class="container">
+        <div class="display-4">About Us!</div>
+
+        <p> One of the fastest growing Tech Firm.</p>
+        <p> We are a team of tech enthusiastic devoted for the best Solutions.</p>
+    </div>
+</section>
+
+<section id="service"   class="section bg-dark text-light text-justify">
+    <div class="container ">
+        <div class="display-4">Our Services</div>
+        <ul class="list-group">
+            <li class="list-group-item text-dark text-center">Web Development</li>
+            <li class="list-group-item text-dark text-center">App Engineering</li>
+            <li class="list-group-item text-dark text-center">Application Development</li>
+            <li class="list-group-item text-dark text-center"> CMS Development</li>
+            <li class="list-group-item text-dark text-center"> Debugging</li>
+        </ul>
+
+    </div>
+</section>
+
+<section id="product"   class="section bg-dark text-light text-justify">
+    <div class="container">
+        <div class="display-4">Our Product</div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <h4 class="card-header text-dark text-center" >Food Mart</h4>
+                    <img class="card-img-top" src ="http://via.placeholder.com/350x150">
+                    <div class="card-title text-dark text-center">Food Odering App </div>
+                    <div class="card-text text-dark text-center">One of the best App in the market</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h4 class="card-header text-dark text-center" >Skill Quest</h4>
+                    <img class="card-img-top" src ="http://via.placeholder.com/350x150">
+                    <div class="card-title text-dark text-center">Best Skill Test App </div>
+                    <div class="card-text text-dark text-center">One of the best App in the market</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h4 class="card-header text-dark text-center" >Musiko</h4>
+                    <img class="card-img-top" src ="http://via.placeholder.com/350x150">
+                    <div class="card-title text-dark text-center">Music player App </div>
+                    <div class="card-text text-dark text-center">One of the best App in the market</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <h4 class="card-header text-dark text-center" >Freak Out</h4>
+                    <img class="card-img-top" src ="http://via.placeholder.com/350x150">
+                    <div class="card-title text-dark text-center">Women Safety App </div>
+                    <div class="card-text text-dark text-center">One of the best App in the market</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact"   class="section bg-dark text-light text-justify">
+    <div class="container">
+        <div class="display-4">Contact Us!</div>
+        <p>www.atechlab.net</p>
+
+    </div>
+</section>
+
+
+<section id="button"   class="section bg-dark text-light text-justify">
+    <div class="display-4 container">Buttons</div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <code><pre>&lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-light"&gt;Light&lt;/button&gt;<br />&lt;button type="button" class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;</pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer></footer>
 
 
