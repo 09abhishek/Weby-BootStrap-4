@@ -17,10 +17,18 @@
         background-color: #dddddd;
     }
     section {
+        background-size: cover;
+        background-position: center center;
         width:100%;
+
         min-height: 100%;
         padding-top: 75px;
     }
+    #intro {
+        background-image: url(http://lorempixel.com/1920/1200/);
+        background-color: lavender;
+    }
+
 
 </style>
 
@@ -35,6 +43,7 @@ very important!-->
 
     <div class="collapse navbar-collapse" id="navBarMain">
         <ul class="navbar-nav">
+            <li class="nav-item"><a href="#intro" class="nav-link"> Introduction </a></li>
             <li class="nav-item"><a href="#about" class="nav-link"> About Us </a></li>
             <li class=""><a href="#service" class="nav-link"> Our Service </a></li>
             <li class=""><a href="#product" class="nav-link"> Our Products </a></li>
@@ -56,9 +65,9 @@ very important!-->
     </div>
 </section>
 
-<section id="intro"   class="section bg-dark text-light text-justify">
-    <div class="container">
-        <div class="display-4">About Us!</div>
+<section id="intro"   class="section">
+    <div class="container bg-light rounded border-dark">
+        <div class="display-4 ">Introduction</div>
 
         <p> One of the fastest growing Tech Firm.</p>
         <p> We are a team of tech enthusiastic devoted for the best Solutions.</p>
@@ -160,33 +169,23 @@ very important!-->
     </div>
 </section>
 
-<footer></footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<footer class="bg-dark text-light">
+    <div class="container">
+<div class="row">
+            <div class="col-md-5">
+                <h3>Need more Info</h3>
+                <p>Get in touch with us : +91-9965343718</p>
+            </div>
+            <div class="col">
+                <h3>Join Now <button class="btn btn-outline-primary">Click Here!</button></h3>
+            </div>
+            <div class="col">
+                <h6>Copyright © 2017 ATechLab. </h6>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!-- Optional JavaScript -->
@@ -197,6 +196,22 @@ very important!-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    <!--Jquery script to higlight the current section in the nav bar items-->
+    $('body').scrollspy({
+        target: '#myNav'
+    })
+    $('#myNav ul li a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var t = this.hash;
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 500, function () {
+            window.location.hash = t;
+        });
+    })
+</script>
 </body>
 </html>
